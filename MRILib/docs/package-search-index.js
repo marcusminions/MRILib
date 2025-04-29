@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"MRILib.managers"},{"l":"MRILib.motion"},{"l":"MRILib.statemachine"}];updateSearchResults();
