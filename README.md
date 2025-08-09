@@ -7,7 +7,7 @@ A flexible, simple Java library for creating clean, abstracted, and reusable rob
 
 ---
 
-## 🚀 Overview
+## Overview
 
 MRILib is a modular codebase for FTC robots that enables rapid development, clean structure, and advanced functionality without boilerplate.
 
@@ -22,33 +22,33 @@ It provides:
 
 ---
 
-## 📦 Library Structure
+## Library Structure
 
-### 🔧 Robot Management Classes (`managers/`)
+### Robot Management Classes (`managers/`)
 - `Bot`: Base class for drivetrain and odometry
 - `ArmBot`: Extends `Bot` with pivot, slide, and claw components
 - `AutoBot`: Extends `ArmBot` with vision and sensor processing
 - These classes encapsulate both **initialization** and **processing** logic for their respective subsystems.
 
-### 🤖 State Machines (`statemachine/`)
+### State Machines (`statemachine/`)
 - `DriveFSM`: Controls sequential drive tasks and ArmFSM calls during Autonomous
 - `ArmFSM`: Manages states of the arm during both TeleOp and Auto
 - `BotState`: Base class for state machine steps
 - Includes private subclassing of `BotState` in `ArmFSM` for encapsulated arm logic
 
-### 🧠 Motion Control (`motion/`)
+### Motion Control (`motion/`)
 - `PID`: Helper Class to calculate a single vector PID control
 - `HeadingPID`: PID Control class for specifically anglewrapped Odometry Heading
 - `PIDController`: 2D motion profiling with `x`, `y`, and `theta` components
 - Used by `DriveFSM` to execute smooth, accurate motion steps
 
-### 🎮 Input Utilities (`util/`)
+### Input Utilities (`util/`)
 - `DebouncedGamepad`: Drop-in replacement for FTC’s Gamepad that handles input edge detection cleanly
 - Simplifies toggles and conditional actions in TeleOp
 
 ---
 
-## 💡 Key Features
+## Key Features
 
 - Modular robot building through layered base classes
 - Autonomous drive control via FSM and PID
